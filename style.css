@@ -1,0 +1,127 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.contenedor{
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 200px;
+}
+
+figure{
+  width: 100%;
+  position: relative;
+}
+
+figure .mapa{
+  width: 100%;
+  vertical-align: top;
+  box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.20);
+  border-radius: 10px;
+}
+
+figure .icono{
+  position: absolute;
+  margin-left: 52.2%;
+  top: 50%;
+  font-size: 40px;
+  color: #ea4335;
+}
+
+.tool-tip{
+  display: flex;
+  position: absolute;
+
+  background: #fff;
+  box-shadow: 5px 5px 50px rgba(0,0,0,0.20);
+  border-radius: 10px;
+  width: 31.25em;
+  z-index: 1000;
+  opacity: 0;
+  transition: 1s ease all;
+  transform: translateY(10px);
+}
+/* triangulo */
+.tool-tip::after{
+  position: absolute;
+  content: "";
+  display: inline-inline;
+  border-left:  15px solid transparent;
+  border-right:  15px solid transparent;
+  border-top:  15px solid #fff;
+  bottom: -15px;
+  left: calc(50% - 15px);
+
+}
+
+.tool-tip.activo {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.tool-tip .thumb{
+  width: 40%;
+}
+.tool-tip .thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+  vertical-align: top;
+}
+
+.tool-tip .info{
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tool-tip .info .titulo{
+  color: rgba(14, 125, 196, 0.94);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tool-tip .info .titulo2{
+  color: #707070;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.tool-tip .info .resumen{
+  margin-bottom: 20px;
+}
+
+.tool-trip .info .contenedor-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.tool-tip .info button{
+  border: none;
+  background: rgb(23, 136, 17);
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 80%;
+  color: #fff;
+  border-radius: 100px;
+  font-family: 'Source Sans Pro', sans-serif;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+
+.tool-tip .info button:hover{
+  background: rgba(58, 191, 25, 0.93);
+
+}
